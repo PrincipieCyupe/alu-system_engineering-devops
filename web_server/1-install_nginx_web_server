@@ -6,5 +6,7 @@ apt-get -y install nginx
 ufw enable
 ufw allow 'Nginx HTTP'
 ufw allow 'OpenSSH'
-echo "Holberton School" > /var/www/html/index.html
+
+echo "Holberton School" | tee /var/www/html/index.nginx-debian.html > /var/www/html/index.html
+
 service nginx restart
