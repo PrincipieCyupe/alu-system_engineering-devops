@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #Installing nginx web server
 
-apt update -y
-apt install  nginx -y
+apt-get update -y
+apt-get install  nginx -y
 ufw enable
 ufw allow "Nginx HTTP"
 ufw allow "OpenSSH"
