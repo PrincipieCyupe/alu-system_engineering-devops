@@ -1,7 +1,20 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # Update package list and install nginx
 apt-get update -y
 apt-get install nginx -y
 chown -R www-data:www-data /var/www/html
 echo "Holberton School for the win!" > /var/www/html/index.html
+=======
+# SetUp Process for Nginx on a server
+
+apt-get -y update
+apt-get -y install nginx
+ufw enable
+ufw allow 'Nginx HTTP'
+ufw allow 'OpenSSH'
+
+echo "Holberton School" | tee /var/www/html/index.nginx-debian.html > /var/www/html/index.html
+
+>>>>>>> 53acd935a7fb2bbe2f1a823b33eba948840e43c1
 service nginx restart
